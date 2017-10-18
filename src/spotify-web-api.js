@@ -269,7 +269,8 @@ SpotifyWebApi.prototype = {
       .withPath('/v1/search/')
       .withQueryParameters({
         type : types.join(','),
-        q : query
+        q : query,
+        token_type: 'Bearer'
       }, options)
       .build()
       .execute(HttpManager.get, callback);
